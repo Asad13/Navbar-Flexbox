@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Anton;
+  src: url("../assets/fonts/Anton-Regular.ttf");
+}
+
+@font-face {
+  font-family: NotoSerif;
+  src: url("../assets/fonts/NotoSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: Teko;
+  src: url("../assets/fonts/Teko-Regular.ttf");
+}

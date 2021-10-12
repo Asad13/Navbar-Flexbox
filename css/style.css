@@ -1,0 +1,56 @@
+@import url("./fonts.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Color Theme Swatches in Hex */
+/* 
+.Yellow-Grey-Red-1-hex { color: #BB2020; }
+.Yellow-Grey-Red-2-hex { color: #06111C; }
+.Yellow-Grey-Red-3-hex { color: #BEC7C7; }
+.Yellow-Grey-Red-4-hex { color: #FFEB4D; }
+.Yellow-Grey-Red-5-hex { color: #121317; } 
+*/
+
+/* ----- Global Variables START ----- */
+:root {
+  /* Fonts START */
+  --anton: Anton, sans-serif;
+  --notoSerif: NotoSerif, sans-serif;
+  --teko: Teko, sans-serif;
+  /* Fonts END */
+
+  /* Color Theme START */
+  --color-blackish: #0f0f0f;
+  --color-primary-blackish: rgba(17, 18, 23, 1);
+  --color-primary-bluish: rgba(5, 17, 28, 1);
+  --color-secondary-dark: rgba(33, 33, 33, 1);
+  --color-secondary-light: rgba(189, 198, 198, 1);
+  --color-complementary-yellowish: rgba(255, 235, 77, 1);
+  --color-complementary-reddish: rgba(186, 31, 31, 1);
+  --color-white: #ffffff;
+  /* Color Theme END */
+
+  /* width,height,padding and Margin START */
+  --page-padding-lg-screen: 0 2rem;
+  --page-padding-sm-screen: 0 1rem;
+  --navbar-height: 9vh;
+  --navbar-link-height-sm: 6.7vh;
+  /* width,height,padding and Margin END */
+}
+/* ----- Global Variables END ----- */
+
+/* ----- Global Styles START ----- */
+a {
+  text-decoration: none;
+}
+/* ----- Global Styles  END ----- */
+
+/* ----- Header START ----- */
+/* ----- Header END ----- */
+
+/* ----- START ----- */
+/* ----- END ----- */
