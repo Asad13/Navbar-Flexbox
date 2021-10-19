@@ -6,15 +6,6 @@
   padding: 0;
 }
 
-/* Color Theme Swatches in Hex */
-/* 
-.Yellow-Grey-Red-1-hex { color: #BB2020; }
-.Yellow-Grey-Red-2-hex { color: #06111C; }
-.Yellow-Grey-Red-3-hex { color: #BEC7C7; }
-.Yellow-Grey-Red-4-hex { color: #FFEB4D; }
-.Yellow-Grey-Red-5-hex { color: #121317; } 
-*/
-
 /* ----- Global Variables START ----- */
 :root {
   /* Fonts START */
@@ -136,13 +127,8 @@ ul#primaryMenu > li.nav-item > a.nav-link,
   padding: 0 2rem;
 }
 
-/* 
-ul#primaryMenu > li.nav-item:hover {
-  background: rgba(186, 31, 31, 1);
-  background: var(--color-complementary-reddish, rgba(186, 31, 31, 1));
-} */
-
-.nav-btn-label {
+.nav-btn-label,
+.nav-btn-toggle {
   cursor: pointer;
 }
 
@@ -167,7 +153,9 @@ ul#primaryMenu > li.nav-item:hover {
     transparent transparent transparent;
 }
 
-.nav-btn {
+.nav-btn,
+.nav-btn-label-toggle,
+#topNavToggleBtn {
   display: none;
 }
 
@@ -239,12 +227,142 @@ ul#primaryMenu > li.nav-item:hover {
   border-color: transparent transparent transparent
     var(--color-complementary-yellowish, rgba(255, 235, 77, 1));
 }
-/* Seek alternative of this */
-/* .dropdown-container:hover > .dropdown-secondary {
-  display: block !important;
-} */
 
 /* ----- Header END ----- */
+
+/* ----- Media => (max-width: 1024px) START ----- */
+
+@media only screen and (max-width: 1024px) {
+  /* ----- Header START ----- */
+  nav#topNav {
+    padding: 0 1rem;
+    padding: var(--page-padding-sm-screen, 0 1rem);
+  }
+  ul#primaryMenu > li.nav-item > a.nav-link,
+  .nav-btn-label-primary {
+    padding: 0 1rem;
+  }
+
+  .dropdown > li.nav-item > a.nav-link,
+  .nav-btn-label-secondary {
+    padding: 0.5rem 1rem 0.5rem 0.6rem;
+  }
+  /* ----- Header END ----- */
+}
+
+/* ----- Media => (max-width: 1024px) END ----- */
+
+/* ----- Media => (max-width: 768px) START ----- */
+
+@media only screen and (max-width: 768px) {
+  nav#topNav {
+    flex-direction: column;
+  }
+
+  ul#primaryMenu {
+    flex-direction: column;
+  }
+
+  .nav-btn-label-primary {
+    justify-content: flex-start;
+  }
+
+  .nav-btn-label-primary span {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    border-style: solid;
+  }
+
+  .dropdown li.nav-item .nav-btn-label-secondary span {
+    border-width: 8px;
+    border-color: #ffffff transparent transparent transparent;
+    border-color: var(--color-white, #ffffff) transparent transparent
+      transparent;
+  }
+
+  .dropdown li.nav-item .nav-btn-label-secondary:hover span {
+    border-color: rgba(255, 235, 77, 1) transparent transparent transparent;
+    border-color: var(--color-complementary-yellowish, rgba(255, 235, 77, 1))
+      transparent transparent transparent;
+  }
+
+  ul.nav-menu li.nav-item a.nav-link,
+  .nav-btn-label,
+  .nav-btn-label-secondary {
+    display: flex;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    background: none;
+  }
+
+  .dropdown::before {
+    content: "";
+    border: none;
+  }
+
+  .dropdown > li.nav-item > a.nav-link,
+  .nav-btn-label-secondary {
+    line-height: 9vh;
+    line-height: var(--navbar-height, 9vh);
+    padding: 0 1rem 0 2rem;
+  }
+
+  .dropdown > li.nav-item > .dropdown > li.nav-item > a.nav-link,
+  .dropdown > li.nav-item > .dropdown > li.nav-item > .nav-btn-label-secondary {
+    padding: 0 1rem 0 3rem;
+  }
+
+  .dropdown
+    > li.nav-item
+    > .dropdown
+    > li.nav-item
+    > .dropdown
+    > li.nav-item
+    > a.nav-link {
+    padding: 0 1rem 0 4rem;
+  }
+
+  .nav-btn-label-toggle {
+    display: block;
+    position: absolute;
+    right: 0;
+    margin: 2vh 1rem 2vh 0;
+  }
+
+  .nav-btn-label-toggle .toggle-btn-line {
+    width: 2.4rem;
+    height: 1vh;
+    background: #ffffff;
+    background: var(--color-white, #ffffff);
+  }
+
+  .nav-btn-label-toggle .toggle-btn-line:not(:last-child) {
+    margin-bottom: 1vh;
+  }
+
+  ul.nav-menu {
+    display: none !important;
+  }
+
+  .subscribe {
+    display: none;
+  }
+
+  #topNavToggleBtn:checked + ul.nav-menu,
+  #topNavToggleBtn:checked ~ .subscribe {
+    display: flex !important;
+  }
+
+  .subscribe {
+    justify-content: flex-end;
+  }
+}
+
+/* ----- Media => (max-width: 768px) END ----- */
 
 /* ----- START ----- */
 /* ----- END ----- */
