@@ -239,6 +239,10 @@ ul#primaryMenu > li.nav-item:hover {
   border-color: transparent transparent transparent
     var(--color-complementary-yellowish, rgba(255, 235, 77, 1));
 }
+/* Seek alternative of this */
+/* .dropdown-container:hover > .dropdown-secondary {
+  display: block !important;
+} */
 
 /* ----- Header END ----- */
 
