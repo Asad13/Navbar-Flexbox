@@ -12,3 +12,8 @@
   font-family: Teko;
   src: url("../assets/fonts/Teko-Regular.ttf");
 }
+
+@font-face {
+  font-family: Londrina;
+  src: url("../assets/fonts/LondrinaSolid-Regular.ttf");
+}
