@@ -27,17 +27,22 @@ window.addEventListener('click', (event) => {
         }
     }
 
-    var siblings = event.target.parentElement.parentElement.children;
-    var current = event.target.parentElement;
-    var i = 0;
-    for (i = 0; i < siblings.length; i++) {
-        if (!current.isEqualNode(siblings[i])) {
-            var elements = siblings[i].children;
-            if (elements[0].matches('.nav-btn-label')) {
-                elements[1].checked = false;
-                elements[2].style.display = 'none';
+    if (event.target.matches('.nav-btn') || event.target.matches('.nav-btn-label') || event.target.matches('.nav-btn-arrow')) {
+        var siblings = event.target.parentElement.parentElement.children;
+        var current = event.target.parentElement;
+        var i = 0;
+        for (i = 0; i < siblings.length; i++) {
+            if (!current.isEqualNode(siblings[i])) {
+                var elements = siblings[i].children;
+                if (elements[0]) {
+                    if (elements[0].matches('.nav-btn-label')) {
+                        elements[1].checked = false;
+                        elements[2].style.display = 'none';
+                    }
+                }
             }
         }
+
     }
 });
 

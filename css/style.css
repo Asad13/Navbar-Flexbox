@@ -167,6 +167,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
   position: absolute;
   display: none;
   width: max-content;
+  transition: all 350ms linear;
   background: rgba(186, 31, 31, 1);
   background: var(--color-complementary-reddish, rgba(186, 31, 31, 1));
 }
@@ -175,6 +176,13 @@ ul#primaryMenu > li.nav-item > a.nav-link,
   content: "";
   position: absolute;
   border: 10px solid transparent;
+}
+
+.dropdown-primary {
+  animation-name: dropdown-animation;
+  animation-duration: 350ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 .dropdown-primary::before {
@@ -187,6 +195,10 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 .dropdown-secondary {
   top: 0.5rem;
   left: 110%;
+  animation-name: dropdown-secondary-animation;
+  animation-duration: 350ms;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
 }
 
 .dropdown-secondary::before {
@@ -198,6 +210,28 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 .nav-btn:checked + .dropdown {
   display: block !important;
+}
+
+@keyframes dropdown-animation {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown-secondary-animation {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  100% {
+    top: 0.5rem;
+    opacity: 1;
+  }
 }
 
 .dropdown li.nav-item:not(:last-child) {
@@ -290,7 +324,19 @@ ul#primaryMenu > li.nav-item > a.nav-link,
   ul.nav-menu li.nav-item a.nav-link,
   .nav-btn-label,
   .nav-btn-label-secondary {
+    min-height: 0;
+    max-height: 9vh;
+    animation: navbar-animation 350ms linear both;
     display: flex;
+  }
+
+  @keyframes navbar-animation {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 9vh;
+    }
   }
 
   .dropdown {
