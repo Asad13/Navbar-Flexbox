@@ -179,10 +179,10 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 }
 
 .dropdown-primary {
-  -webkit-animation: dropdown-animation 350ms linear both;
-  -moz-animation: dropdown-animation 350ms linear both;
-  -o-animation: dropdown-animation 350ms linear both;
-  animation: dropdown-animation 350ms linear both;
+  -webkit-animation: dropdown-animation 150ms linear both;
+  -moz-animation: dropdown-animation 150ms linear both;
+  -o-animation: dropdown-animation 150ms linear both;
+  animation: dropdown-animation 150ms linear both;
 }
 
 .dropdown-primary::before {
@@ -195,10 +195,10 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 .dropdown-secondary {
   top: 0.5rem;
   left: 110%;
-  -webkit-animation: dropdown-secondary-animation 350ms linear both;
-  -moz-animation: dropdown-secondary-animation 350ms linear both;
-  -o-animation: dropdown-secondary-animation 350ms linear both;
-  animation: dropdown-secondary-animation 350ms linear both;
+  -webkit-animation: dropdown-secondary-animation 250ms linear both;
+  -moz-animation: dropdown-secondary-animation 250ms linear both;
+  -o-animation: dropdown-secondary-animation 250ms linear both;
+  animation: dropdown-secondary-animation 250ms linear both;
 }
 
 .dropdown-secondary::before {
@@ -214,7 +214,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-webkit-keyframes dropdown-animation {
   0% {
-    top: -100%;
+    top: 110%;
     opacity: 0;
   }
   100% {
@@ -225,7 +225,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-moz-keyframes dropdown-animation {
   0% {
-    top: -100%;
+    top: 110%;
     opacity: 0;
   }
   100% {
@@ -236,7 +236,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-o-keyframes dropdown-animation {
   0% {
-    top: -100%;
+    top: 110%;
     opacity: 0;
   }
   100% {
@@ -247,7 +247,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @keyframes dropdown-animation {
   0% {
-    top: -100%;
+    top: 110%;
     opacity: 0;
   }
   100% {
@@ -258,7 +258,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-webkit-keyframes dropdown-secondary-animation {
   0% {
-    top: -100%;
+    top: 0.8rem;
     opacity: 0;
   }
   100% {
@@ -269,7 +269,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-moz-keyframes dropdown-secondary-animation {
   0% {
-    top: -100%;
+    top: 0.6rem;
     opacity: 0;
   }
   100% {
@@ -280,7 +280,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @-o-keyframes dropdown-secondary-animation {
   0% {
-    top: -100%;
+    top: 0.8rem;
     opacity: 0;
   }
   100% {
@@ -291,7 +291,7 @@ ul#primaryMenu > li.nav-item > a.nav-link,
 
 @keyframes dropdown-secondary-animation {
   0% {
-    top: -100%;
+    top: 0.8rem;
     opacity: 0;
   }
   100% {
